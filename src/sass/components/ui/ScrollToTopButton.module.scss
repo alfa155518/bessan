@@ -1,0 +1,48 @@
+@use "../../helpers/variables" as *;
+@use "../../helpers/mixins" as *;
+
+.scrollTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+    color: $color-white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba($color-primary-dark, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    @include flex(row, center, center);
+    font-size: 2rem;
+
+    &:hover {
+        background: linear-gradient(135deg, $color-primary-light 0%, $color-primary 100%);
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba($color-primary-dark, 0.4);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+    .icon {
+        transition: transform 0.3s ease;
+    }
+
+    &:hover .icon {
+        transform: translateY(-2px);
+    }
+}
+
+
+@media (max-width: 767px) {
+    .scrollTop {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}

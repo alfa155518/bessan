@@ -1,0 +1,22 @@
+@use "@/sass/helpers/variables" as *;
+@use "@/sass/helpers/mixins" as *;
+
+.sectionName {
+    @include flex(column, center, center, 1rem);
+
+    h2 {
+        font-size: clamp(2.5rem, 5vw, 3rem);
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        color: $color-primary-dark;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    p {
+        font-size: clamp(1.1rem, 2vw, 1.3rem);
+        line-height: 1.8;
+        margin-bottom: 4rem;
+        color: $color-dark;
+    }
+}

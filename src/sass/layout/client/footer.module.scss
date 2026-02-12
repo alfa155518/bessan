@@ -1,0 +1,234 @@
+@use '@/sass/helpers/_variables' as *;
+@use '@/sass/helpers/_mixins' as *;
+
+.footer {
+    background: $bg-footer;
+    color: $text-inverse;
+    padding: 8rem 0 2rem;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, $color-primary-light, $color-primary, $color-secondary);
+    }
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 4rem;
+    margin-bottom: 6rem;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+.brand {
+    .logo {
+        margin-bottom: 2rem;
+        display: inline-block;
+
+        img {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+        }
+    }
+
+    .description {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        color: rgba($text-inverse, 0.8);
+        margin-bottom: 3rem;
+    }
+
+    .socials {
+        @include flex(row, flex-start, center, 1.5rem);
+
+        @media (max-width: 767px) {
+            justify-content: center;
+        }
+
+        .socialLink {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba($color-white, 0.1);
+            @include flex(row, center, center, 0);
+            color: $text-inverse;
+            font-size: 2rem;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: $color-primary-light;
+                transform: translateY(-5px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+}
+
+.section {
+    .title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 2.5rem;
+        position: relative;
+        padding-bottom: 1rem;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: $color-primary-light;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 767px) {
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    .links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-bottom: 1.5rem;
+
+            a {
+                color: rgba($text-inverse, 0.7);
+                text-decoration: none;
+                font-size: 1.6rem;
+                transition: all 0.3s ease;
+                @include flex(row, flex-start, center, 1rem);
+
+                @media (max-width: 767px) {
+                    justify-content: center;
+                }
+
+                &:hover {
+                    color: $text-inverse;
+                    padding-left: 0.5rem;
+                }
+            }
+        }
+    }
+
+    .contactInfo {
+        .infoItem {
+            @include flex(row, flex-start, center, 1.5rem);
+            margin-bottom: 1.5rem;
+            color: rgba($text-inverse, 0.7);
+            font-size: 1.6rem;
+
+            a {
+                color: rgba($text-inverse, 0.7);
+                text-decoration: none;
+                font-size: 1.6rem;
+                transition: all 0.3s ease;
+                @include flex(row, flex-start, center, 1rem);
+
+                @media (max-width: 767px) {
+                    justify-content: center;
+                }
+
+                &:hover {
+                    color: $text-inverse;
+                    padding-left: 0.5rem;
+                }
+            }
+
+            @media (max-width: 767px) {
+                justify-content: center;
+            }
+
+            .icon {
+                color: $color-primary-light;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+
+
+.bottomBar {
+    padding-top: 3rem;
+    border-top: 1px solid rgba($color-white, 0.1);
+    @include flex(row, space-between, center, 0);
+
+    @media (max-width: 767px) {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .copyright {
+        font-size: 1.4rem;
+        color: rgba($text-inverse, 0.6);
+    }
+
+    .bottomLinks {
+        @include flex(row, flex-end, center, 3rem);
+
+        a {
+            color: rgba($text-inverse, 0.6);
+            text-decoration: none;
+            font-size: 1.4rem;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $text-inverse;
+            }
+        }
+    }
+}
+
+// RTL Support
+[dir="rtl"] {
+    .section {
+        .title::after {
+            left: auto;
+            right: 0;
+        }
+
+        .links li a:hover {
+            padding-left: 0;
+            padding-right: 0.5rem;
+        }
+
+        .brand .socials {
+            justify-content: flex-start;
+
+            @media (max-width: 767px) {
+                justify-content: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+  "about": {
+    "title": "Beesan Charity",
+    "description": "Working to empower the underprivileged and provide humanitarian and developmental support to the Palestinian community through our diverse and sustainable programs."
+  },
+  "quickLinks": {
+    "title": "Quick Links",
+    "home": "Home",
+    "aboutUs": "About Us",
+    "projects": "Projects & Programs",
+    "news": "News & Events"
+  },
+  "support": {
+    "title": "Support",
+    "contact": "Contact Us",
+    "donate": "Donate Now",
+    "faq": "FAQ",
+    "privacy": "Privacy Policy"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "address": "Gaza, Palestine",
+    "phone": "+970 59-000-0000",
+    "email": "info@beesan.org"
+  },
+  "copyright": "© {year} Beesan Charity. All rights reserved."
+}

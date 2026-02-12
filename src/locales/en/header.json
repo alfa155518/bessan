@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "projectsPrograms": "Projects & Programs",
+    "newsEvents": "News & Events",
+    "reportsTransparency": "Reports & Transparency",
+    "contactUs": "Contact Us"
+  },
+  "languageToggle": {
+    "ar": "العربية",
+    "en": "English"
+  }
+}

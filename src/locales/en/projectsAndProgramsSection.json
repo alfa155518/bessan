@@ -1,0 +1,21 @@
+{
+    "title": "Projects and Programs",
+    "description": "We offer a diverse range of growth-oriented programs and projects",
+    "card1": {
+        "title": "Education Program",
+        "description": "Providing equal educational opportunities to disadvantaged children"
+    },
+    "card2": {
+        "title": "Health Program",
+        "description": "Providing comprehensive health services to marginalized communities"
+    },
+    "card3": {
+        "title": "Social Support Program",
+        "description": "Providing financial and emotional support to poor families"
+    },
+    "card4": {
+        "title": "Sustainable Environment",
+        "description": "Protecting the environment and promoting sustainable practices"
+    },
+    "btn": "Learn More"
+}

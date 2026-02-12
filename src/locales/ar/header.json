@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "aboutUs": "من نحن",
+    "projectsPrograms": "المشاريع والبرامج",
+    "newsEvents": "الأخبار والفعاليات",
+    "reportsTransparency": "التقارير والشفافية",
+    "contactUs": "اتصل بنا"
+  },
+  "languageToggle": {
+    "ar": "العربية",
+    "en": "English"
+  }
+}

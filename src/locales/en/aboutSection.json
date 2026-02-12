@@ -1,0 +1,12 @@
+{
+    "title": "Who we are",
+    "description": "Beesan Charitable Society works to achieve sustainable development and social justice through specialized programs focusing on education, health, and humanitarian aid.",
+    "stats": {
+        "humanity": "Humanity and Justice",
+        "sustainability": "Sustainability and Responsibility",
+        "transparency": "Transparency and Integrity"
+    },
+    "buttons": {
+        "about": "About Us"
+    }
+}

@@ -1,0 +1,53 @@
+@use "@/sass/helpers/variables" as *;
+@use "@/sass/helpers/mixins" as *;
+
+.statistics {
+    color: $color-white;
+    background-color: $bg-footer;
+    text-align: center;
+    margin: 5rem auto;
+    padding: 5rem 0;
+
+    .container {
+        .title {
+            margin-bottom: 2rem;
+
+            h2 {
+                font-size: clamp(2.8rem, 5vw, 3rem);
+                font-weight: 800;
+                margin-bottom: 2rem;
+                line-height: 1.2;
+            }
+
+            p {
+                font-size: clamp(1.1rem, 2vw, 1.5rem);
+                line-height: 1.8;
+                margin-bottom: 4rem;
+            }
+        }
+
+        .statsContainer {
+            @include flex(row, center, center, 20rem);
+
+            .statistic {
+                @include flex(column, center, center, 1rem);
+
+                strong {
+                    font-size: clamp(2rem, 5vw, 3rem);
+                    font-weight: 800;
+                }
+
+                span {
+                    font-size: clamp(1rem, 2vw, 1.3rem);
+                }
+            }
+
+            @media (max-width: 992px) {
+                @include flex(row, space-around);
+            }
+
+        }
+
+    }
+
+}
