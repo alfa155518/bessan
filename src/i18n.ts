@@ -4,33 +4,43 @@ import enHeader from "./locales/en/header.json";
 import enFooter from "./locales/en/footer.json";
 import arHeader from "./locales/ar/header.json";
 import arFooter from "./locales/ar/footer.json";
-import enHero from "./locales/en/hero.json";
-import arHero from "./locales/ar/hero.json";
-import enAboutSection from "./locales/en/aboutSection.json";
-import arAboutSection from "./locales/ar/aboutSection.json";
-import enStatisticsSection from "./locales/en/statisticsSection.json";
-import arStatisticsSection from "./locales/ar/statisticsSection.json";
-import enProjectsAndProgramsSection from "./locales/en/projectsAndProgramsSection.json";
-import arProjectsAndProgramsSection from "./locales/ar/projectsAndProgramsSection.json";
+import enHero from "./locales/en/Home/hero.json";
+import arHero from "./locales/ar/Home/hero.json";
+import enAboutSection from "./locales/en/Home/aboutSection.json";
+import arAboutSection from "./locales/ar/Home/aboutSection.json";
+import enStatisticsSection from "./locales/en/Home/statisticsSection.json";
+import arStatisticsSection from "./locales/ar/Home/statisticsSection.json";
+import enProjectsAndProgramsSection from "./locales/en/Home/projectsAndProgramsSection.json";
+import arProjectsAndProgramsSection from "./locales/ar/Home/projectsAndProgramsSection.json";
+import enAboutBanner from "./locales/en/About/about.json";
+import arAboutBanner from "./locales/ar/About/about.json";
 const savedLanguage = JSON.parse(localStorage.getItem('language-storage') || '{}')?.state?.language || "ar";
 
 i18n.use(initReactI18next).init({
     resources: {
         en: {
+            // Home
             hero: enHero,
             aboutSection: enAboutSection,
             statisticsSection: enStatisticsSection,
             projectsAndProgramsSection: enProjectsAndProgramsSection,
+            // About
+            about: enAboutBanner,
+            // Layout
             header: enHeader,
-            footer: enFooter
+            footer: enFooter,
         },
         ar: {
+            // Home
             hero: arHero,
             aboutSection: arAboutSection,
             statisticsSection: arStatisticsSection,
             projectsAndProgramsSection: arProjectsAndProgramsSection,
+            // About
+            about: arAboutBanner,
+            // Layout
             header: arHeader,
-            footer: arFooter
+            footer: arFooter,
         }
     },
     lng: savedLanguage,

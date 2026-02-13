@@ -1,12 +1,22 @@
-import { useTranslation } from "react-i18next";
+
 import styles from "@/sass/components/common/sectionName.module.scss";
 
-export default function SectionName({ sectionName }: { sectionName: string }) {
-    const { t } = useTranslation(`${sectionName}`);
+interface SectionNameProps {
+    title: string | boolean;
+    description?: string | boolean;
+}
+
+export default function SectionName({ title, description = false }: SectionNameProps) {
     return (
         <div className={styles.sectionName}>
-            <h2>{t("title")}</h2>
-            <p>{t("description")}</p>
+            <h2>{
+                title
+            }</h2>
+            <p>
+                {
+                    description
+                }
+            </p>
         </div>
     );
 }

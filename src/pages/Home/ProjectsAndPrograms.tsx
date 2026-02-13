@@ -37,7 +37,7 @@ export default function ProjectsAndPrograms() {
 
     return (
         <section className={styles.projectAndPrograms} dir={lang === "ar" ? "rtl" : "ltr"}>
-            <SectionName sectionName="projectsAndProgramsSection" />
+            <SectionName title={t("title")} description={t("description")} />
 
             <motion.div
                 className={styles.cards}

@@ -1,0 +1,34 @@
+{
+    "banner": {
+        "title": "About Us",
+        "description": "Beesan Charity Association works to achieve sustainable development and social justice through specialized programs focusing on education, health, and humanitarian aid."
+    },
+    "vision": {
+        "title": "Our Vision",
+        "highlight": "A sustainable community with equal opportunities and a decent life for all",
+        "description": "We strive to create a world where everyone enjoys equal opportunities and a decent life, regardless of their background or economic circumstances. Our vision is a just and sustainable society based on cooperation and solidarity."
+    },
+    "message": {
+        "title": "Our Mission",
+        "highlight": "We seek to build a cohesive community that enjoys justice, dignity, and sustainability",
+        "description": "We believe that every individual deserves a fair chance to live with dignity and contribute to their community. Through our diverse programs, we work to empower individuals and communities to reach their full potential."
+    },
+    "values": {
+        "title": "Our Values",
+        "humanity": {
+            "title": "Humanity and Justice",
+            "description": "We believe in the value of every human being and strive to ensure justice and equality in all our programs and services."
+        },
+        "sustainability": {
+            "title": "Sustainability and Responsibility",
+            "description": "We are committed to sustainable practices and responsibility towards the environment and future generations."
+        },
+        "transparency": {
+            "title": "Transparency and Integrity",
+            "description": "We operate with full transparency and take responsibility for all our activities and decisions."
+        }
+    },
+    "team": {
+        "title": "Our Team"
+    }
+}
