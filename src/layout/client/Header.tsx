@@ -4,7 +4,7 @@ import { FiMenu, FiX, FiGlobe } from "react-icons/fi";
 
 import Logo from "@/assets/logo.webp";
 import styles from "@/sass/layout/client/header.module.scss";
-import { Link, useLocation } from "react-router";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useLanguageStore } from "@/store/languageStore";
 
@@ -16,7 +16,7 @@ export default function Header() {
   const location = useLocation();
 
   const navItems = [
-    { key: "nav.home", href: "/" },
+    { key: "nav.home", href: "/bessan" },
     { key: "nav.aboutUs", href: "/about" },
     { key: "nav.projectsPrograms", href: "/projects" },
     { key: "nav.newsEvents", href: "/news" },
@@ -30,8 +30,8 @@ export default function Header() {
   };
 
   const isActiveLink = (href: string) => {
-    if (href === "/" && location.pathname === "/") return true;
-    if (href !== "/" && location.pathname.startsWith(href)) return true;
+    if (href === "/bessan" && location.pathname === "/bessan") return true;
+    if (href !== "/bessan" && location.pathname.startsWith(href)) return true;
     return false;
   };
 
@@ -43,9 +43,9 @@ export default function Header() {
       <div className={styles.container}>
         {/* Logo */}
         <div className={styles.logo}>
-          <a href="/" className={styles.logoLink}>
+          <Link to="/bessan" className={styles.logoLink}>
             <img src={Logo} alt="Logo" className={styles.logoIcon} />
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
