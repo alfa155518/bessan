@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://alfa155518.github.io/bessan-frontend/",
+  "homepage": "https://github.com/alfa155518/bessan",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
