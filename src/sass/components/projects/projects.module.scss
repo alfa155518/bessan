@@ -1,0 +1,85 @@
+@use "@/sass/helpers/variables" as *;
+@use "@/sass/helpers/mixins" as *;
+
+// Direct values for shadows to avoid "Undefined variable" errors
+$shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+$shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+.projectAndPrograms {
+    padding: 4rem 2rem;
+    background-color: transparent;
+
+    .cards {
+        @include grid(280px, 2rem);
+        margin-top: 3rem;
+    }
+
+    .card {
+        @include flex(column, flex-start, center, 1.5rem);
+        padding: 3rem 2rem;
+        background-color: $color-white;
+        border-radius: 15px;
+        box-shadow: $shadow-soft;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: $shadow-medium;
+
+            svg {
+                transform: scale(1.1) rotate(10deg);
+                color: $color-primary;
+            }
+        }
+
+        svg {
+            font-size: 4rem;
+            color: $color-secondary;
+            transition: all 0.3s ease;
+        }
+
+        h3 {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: $color-primary;
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: $color-secondary;
+            line-height: 1.6;
+        }
+
+        .detailsBtn {
+            margin-top: auto;
+            padding: 0.8rem 2rem;
+            background-color: transparent;
+            color: $color-primary;
+            border: 2px solid $color-primary;
+            border-radius: 50px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: $color-primary;
+                color: $color-white;
+            }
+        }
+    }
+
+    .btnWrapper {
+        @include flex(row, center, center, 0);
+        margin-top: 4rem;
+
+        .btn {
+            @include primary-link;
+            font-size: 1.8rem;
+            padding: 1.2rem 4rem;
+        }
+    }
+}

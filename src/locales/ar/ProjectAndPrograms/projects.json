@@ -1,0 +1,13 @@
+{
+    "banner": {
+        "title": "المشاريع والبرامج",
+        "description": "نعمل على تمكين المجتمعات من خلال برامج مبتكرة ومستدامة"
+    },
+    "influence": {
+        "title": "تأثيرنا",
+        "activeProjects": "مشروع نشط",
+        "beneficiaries": "مستفيد",
+        "volunteers": "متطوع",
+        "years": "سنة"
+    }
+}

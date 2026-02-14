@@ -1,0 +1,13 @@
+{
+        "banner": {
+            "title": "Projects and Programs",
+            "description": "We work to empower communities through innovative and sustainable programs"
+        },
+        "influence": {
+            "title": "Our Influence",
+            "activeProjects": "Active Projects",
+            "beneficiaries": "Beneficiaries",
+            "volunteers": "Volunteers",
+            "years": "Years"
+        }
+    }

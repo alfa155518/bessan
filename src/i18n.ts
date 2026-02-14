@@ -14,6 +14,8 @@ import enProjectsAndProgramsSection from "./locales/en/Home/projectsAndProgramsS
 import arProjectsAndProgramsSection from "./locales/ar/Home/projectsAndProgramsSection.json";
 import enAboutBanner from "./locales/en/About/about.json";
 import arAboutBanner from "./locales/ar/About/about.json";
+import enProjects from "./locales/en/ProjectAndPrograms/projects.json";
+import arProjects from "./locales/ar/ProjectAndPrograms/projects.json";
 const savedLanguage = JSON.parse(localStorage.getItem('language-storage') || '{}')?.state?.language || "ar";
 
 i18n.use(initReactI18next).init({
@@ -26,6 +28,8 @@ i18n.use(initReactI18next).init({
             projectsAndProgramsSection: enProjectsAndProgramsSection,
             // About
             about: enAboutBanner,
+            // Projects
+            projects: enProjects,
             // Layout
             header: enHeader,
             footer: enFooter,
@@ -38,6 +42,8 @@ i18n.use(initReactI18next).init({
             projectsAndProgramsSection: arProjectsAndProgramsSection,
             // About
             about: arAboutBanner,
+            // Projects
+            projects: arProjects,
             // Layout
             header: arHeader,
             footer: arFooter,
