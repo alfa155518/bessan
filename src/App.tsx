@@ -17,7 +17,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/bessan-frontend/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/news" element={<NewsAndEvents />} />
