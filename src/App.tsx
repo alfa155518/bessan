@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router"
+import { Route, Routes } from "react-router-dom"
 import ScrollToTopButton from "./components/ui/ScrollToTopButton"
 import Footer from "./layout/client/Footer"
 import Header from "./layout/client/Header"
@@ -17,7 +17,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/bessan-frontend/" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/news" element={<NewsAndEvents />} />
