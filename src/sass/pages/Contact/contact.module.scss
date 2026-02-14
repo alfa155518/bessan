@@ -1,0 +1,149 @@
+@use "@/sass/helpers/variables" as *;
+@use "@/sass/helpers/mixins" as *;
+
+.contact {
+
+    .banner {
+        @include banner-section("@/assets/contact/banner.png");
+    }
+
+    .content {
+        padding: 100px 0;
+        background: $color-white;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 80px;
+
+        @media (max-width: 992px) {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+    }
+
+    .infoSide {
+        .title {
+            font-size: 2.5rem;
+            color: $color-primary;
+        }
+
+        .desc {
+            color: $text-secondary;
+            line-height: 1.8;
+            margin-bottom: 4rem;
+        }
+
+        .infoItems {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 50px;
+
+            .item {
+                display: flex;
+                gap: 20px;
+                align-items: flex-start;
+
+                .icon {
+                    width: 54px;
+                    height: 54px;
+                    background: $bg-section;
+                    color: $color-primary;
+                    border-radius: 50%;
+                    @include flex;
+                    font-size: 1.4rem;
+                    flex-shrink: 0;
+                }
+
+                h3 {
+                    font-size: 1.2rem;
+                    margin-bottom: 5px;
+                    color: $text-primary;
+                }
+
+                p {
+                    color: $text-secondary;
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+
+    .formSide {
+        .form {
+            background: $color-white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: $shadow-soft;
+            border: 1px solid $border-color;
+
+            .inputGroup {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+                margin-bottom: 25px;
+
+                @media (max-width: 576px) {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            .field {
+                margin-bottom: 25px;
+
+                label {
+                    display: block;
+                    margin-bottom: 10px;
+                    font-weight: 600;
+                    color: $text-primary;
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    padding: 15px;
+                    border: 1px solid $border-color;
+                    border-radius: 10px;
+                    outline: none;
+                    background: $color-off-white;
+                    font-family: inherit;
+                    transition: all 0.3s ease;
+                    resize: none;
+
+                    &:focus {
+                        border-color: $color-primary;
+                        background: $color-white;
+                        box-shadow: 0 0 0 4px rgba($color-primary, 0.1);
+                    }
+                }
+
+                .inputError {
+                    @include input-error;
+                }
+
+                .errorText {
+                    @include error-text;
+                }
+            }
+
+            .submitBtn {
+                @include primary-link;
+                width: 100%;
+                border: none;
+                padding: 18px;
+            }
+        }
+    }
+
+    .map {
+        line-height: 0;
+    }
+}

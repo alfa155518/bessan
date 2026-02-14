@@ -40,7 +40,7 @@
     background: url($image) no-repeat center center/cover;
     width: 100%;
     position: relative;
-    min-height: 100vh;
+    min-height: 60vh;
     @include flex(column, center, center, 0);
     color: $color-white;
     margin-bottom: 2rem;
@@ -84,4 +84,21 @@
     }
 
     @content;
+}
+
+@mixin input-error {
+    border-color: #ff4d4f !important;
+    background: #fffafa !important;
+
+    &:focus {
+        box-shadow: 0 0 0 4px rgba(#ff4d4f, 0.1) !important;
+    }
+}
+
+@mixin error-text {
+    display: block;
+    color: #ff4d4f;
+    font-size: 1rem;
+    margin-top: 8px;
+    font-weight: 500;
 }

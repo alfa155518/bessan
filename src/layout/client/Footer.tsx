@@ -55,7 +55,7 @@ export default function Footer() {
                 >
                     {/* Brand Section */}
                     <motion.div className={styles.brand} variants={itemVariants}>
-                        <Link to="/" className={styles.logo}>
+                        <Link to="/bessan" className={styles.logo}>
                             <img src={Logo} alt="Beesan Logo" />
                         </Link>
                         <p className={styles.description}>
@@ -82,7 +82,7 @@ export default function Footer() {
                         <h3 className={styles.title}>{t("quickLinks.title")}</h3>
                         <ul className={styles.links}>
                             <li>
-                                <Link to="/">
+                                <Link to="/bessan">
                                     {isRtl ? <FiArrowLeft /> : <FiArrowRight />}
                                     {t("quickLinks.home")}
                                 </Link>
@@ -103,6 +103,12 @@ export default function Footer() {
                                 <Link to="/news">
                                     {isRtl ? <FiArrowLeft /> : <FiArrowRight />}
                                     {t("quickLinks.news")}
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/reports">
+                                    {isRtl ? <FiArrowLeft /> : <FiArrowRight />}
+                                    {t("quickLinks.reports")}
                                 </Link>
                             </li>
                         </ul>

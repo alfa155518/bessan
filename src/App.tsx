@@ -23,6 +23,7 @@ function App() {
         <Route path="/news" element={<NewsAndEvents />} />
         <Route path="/projects" element={<ProjectAndPrograms />} />
         <Route path="/reports" element={<ReportsAndTransparency />} />
+
       </Routes>
       <Footer />
       <ScrollToTopButton />

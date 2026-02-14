@@ -6,11 +6,13 @@ import { motion } from "framer-motion";
 import SectionName from "@/components/common/SectionName";
 import { useTranslation } from "react-i18next";
 import Counter from "@/components/common/Counter";
-import Projects from "@/components/projects/Projects";
+import Projects from "@/components/common/Projects";
 import { FaPeopleCarryBox } from "react-icons/fa6";
 import { FiHeart } from "react-icons/fi";
 import { GrEmptyCircle } from "react-icons/gr";
 import { GiThreeLeaves } from "react-icons/gi";
+
+import ProjectMedia from "./ProjectMedia";
 
 export default function ProjectAndPrograms() {
     const { lang } = useLanguageStore();
@@ -56,6 +58,8 @@ export default function ProjectAndPrograms() {
                     ))}
                 </Projects.List>
             </Projects>
+
+            <ProjectMedia />
 
             <section className={styles.influence}>
                 <SectionName title={tProjects("influence.title")} />

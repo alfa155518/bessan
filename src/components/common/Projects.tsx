@@ -1,6 +1,6 @@
 import { type ReactNode, createContext } from "react";
 import { motion } from "framer-motion";
-import styles from "../../sass/components/projects/projects.module.scss";
+import styles from "@/sass/components/common/projects.module.scss";
 import SectionName from "../common/SectionName";
 
 // --- Context ---

@@ -10,7 +10,6 @@ import { FiHeart } from "react-icons/fi";
 import { GiThreeLeaves } from "react-icons/gi";
 import { GrEmptyCircle } from "react-icons/gr";
 import type { IconType } from "react-icons";
-import FreemodeSwiper from "@/components/common/FreemodeSwiper";
 
 
 interface ValueItemProps {
@@ -60,9 +59,34 @@ const ValueCard = ({ icon: Icon, title, description, index }: { icon: IconType; 
     );
 };
 
+
+import TeamCard from "@/components/common/TeamCard";
+import team1 from "@/assets/about/team-1.webp";
+import team2 from "@/assets/about/team-2.webp";
+import team3 from "@/assets/about/team-3.webp";
+import team4 from "@/assets/about/team-4.webp";
+
+
+interface TeamMember {
+    name: string;
+    position: string;
+    image: string;
+}
+
 export default function AboutPage() {
     const { lang } = useLanguageStore();
     const { t } = useTranslation("about");
+
+    const teamImages = [team1, team2, team3, team4];
+
+    const teamMembersData = t("team.members", { returnObjects: true }) as Array<{ name: string; position: string }>;
+
+    const teamMembers: TeamMember[] = Array.isArray(teamMembersData)
+        ? teamMembersData.map((member, index) => ({
+            ...member,
+            image: teamImages[index]
+        }))
+        : [];
 
     const valuesData = [
         {
@@ -131,7 +155,15 @@ export default function AboutPage() {
                 <div className={styles.container}>
                     <SectionName title={t("team.title")} />
                     <div className={styles.members}>
-                        <FreemodeSwiper />
+                        {teamMembers.map((member, index) => (
+                            <TeamCard
+                                key={index}
+                                name={member.name}
+                                position={member.position}
+                                image={member.image}
+                                index={index}
+                            />
+                        ))}
                     </div>
                 </div>
             </section>

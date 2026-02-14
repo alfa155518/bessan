@@ -29,6 +29,12 @@
         }
     },
     "team": {
-        "title": "Our Team"
+        "title": "Our Team",
+        "members": [
+            { "name": "Ahmed Mansour", "position": "Executive Director" },
+            { "name": "Omar Zaid", "position": "Operations Manager" },
+            { "name": "Khaled Ibrahim", "position": "PR Coordinator" },
+            { "name": "Ahmed Hassan", "position": "Social Worker" }
+        ]
     }
 }

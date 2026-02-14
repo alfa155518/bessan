@@ -1,0 +1,25 @@
+{
+    "types": {
+        "annual": {
+            "title": "Annual Reports",
+            "desc": "Comprehensive reports tracking the association's achievements and annual development"
+        },
+        "financial": {
+            "title": "Financial Reports",
+            "desc": "Audited financial reports reflecting the efficiency of financial resource management"
+        },
+        "performance": {
+            "title": "Performance Statistics",
+            "desc": "Accurate data and analysis to measure the achievement of goals and outputs"
+        }
+    },
+    "download": {
+        "title": "Downloadable PDF Files",
+        "description": "You can browse and download detailed reports available to the public to ensure maximum transparency",
+        "btn": "Download Report"
+    },
+    "banner": {
+        "title": "Transparency & Reports",
+        "description": "We are committed to the highest standards of transparency and accountability in all aspects of our work"
+    }
+}

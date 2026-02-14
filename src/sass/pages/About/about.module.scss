@@ -146,8 +146,13 @@
     }
 
     .team {
-        .container {
-            margin: 4rem 2rem;
+        padding: 6rem 0;
+        background-color: $bg-section;
+
+        .members {
+            @include grid(280px, 30px);
+            margin-top: 4rem;
+
         }
     }
 }
@@ -208,6 +213,12 @@
     .values {
         .cards {
             @include grid(100px, 2rem);
+        }
+    }
+
+    .team {
+        .members {
+            @include grid(250px, 2rem);
         }
     }
 }

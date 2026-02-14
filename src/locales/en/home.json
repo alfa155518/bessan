@@ -1,0 +1,29 @@
+{
+    "news": {
+        "title": "Activities & News",
+        "description": "Follow the latest news and activities of Beesan Charity",
+        "item1": { "title": "Distribution of relief aid to affected families" },
+        "item2": { "title": "Opening a new educational center for children" },
+        "item3": { "title": "Afforestation campaign in different areas" },
+        "readMore": "Read More",
+        "viewAll": "View All News"
+    },
+    "partners": {
+        "title": "Our Partners",
+        "description": "We are proud of our partners who contribute to achieving our goals"
+    },
+    "contact": {
+        "title": "Contact Us",
+        "description": "We are here to answer your inquiries and feedback",
+        "address": { "label": "Address", "value": "Gaza, Palestine" },
+        "phone": { "label": "Phone", "value": "+970 59-000-0000" },
+        "email": { "label": "Email", "value": "info@beesan.org" },
+        "form": {
+            "name": "Full Name",
+            "email": "Email Address",
+            "subject": "Subject",
+            "message": "Your Message",
+            "submit": "Send Message"
+        }
+    }
+}

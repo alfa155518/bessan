@@ -1,0 +1,29 @@
+{
+    "banner": {
+        "title": "Contact Us",
+        "description": "We are always happy to hear from you. Reach out through any of the channels below."
+    },
+    "info": {
+        "title": "Contact Information",
+        "description": "You can reach us through the following channels or visit our main office",
+        "address": { "label": "Address", "value": "Gaza, Palestine, Al-Wehda St." },
+        "phone": { "label": "Phone", "value": "+970 59-000-0000" },
+        "email": { "label": "Email", "value": "info@beesan.org" },
+        "hours": { "label": "Working Hours", "value": "Sun - Thu: 8:00 AM - 3:00 PM" }
+    },
+    "form": {
+        "name": { "label": "Full Name", "placeholder": "Enter your full name" },
+        "email": { "label": "Email Address", "placeholder": "Enter your email address" },
+        "subject": { "label": "Subject", "placeholder": "What is the subject of your message?" },
+        "message": { "label": "Message", "placeholder": "Write your message here..." },
+        "submit": "Send Message",
+        "validation": {
+            "nameRequired": "Name is required",
+            "emailRequired": "Email is required",
+            "emailInvalid": "Invalid email address",
+            "subjectRequired": "Subject is required",
+            "messageRequired": "Message is required",
+            "messageMinLength": "Message must be at least 10 characters"
+        }
+    }
+}

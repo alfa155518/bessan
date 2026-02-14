@@ -16,7 +16,15 @@ import enAboutBanner from "./locales/en/About/about.json";
 import arAboutBanner from "./locales/ar/About/about.json";
 import enProjects from "./locales/en/ProjectAndPrograms/projects.json";
 import arProjects from "./locales/ar/ProjectAndPrograms/projects.json";
-const savedLanguage = JSON.parse(localStorage.getItem('language-storage') || '{}')?.state?.language || "ar";
+import enHome from "./locales/en/home.json";
+import arHome from "./locales/ar/home.json";
+import enContact from "./locales/en/contact.json";
+import arContact from "./locales/ar/contact.json";
+import enNews from "./locales/en/news.json";
+import arNews from "./locales/ar/news.json";
+import enReports from "./locales/en/reports.json";
+import arReports from "./locales/ar/reports.json";
+const savedLanguage = JSON.parse(localStorage.getItem('language-storage') || '{}')?.state?.lang || "ar";
 
 i18n.use(initReactI18next).init({
     resources: {
@@ -33,6 +41,10 @@ i18n.use(initReactI18next).init({
             // Layout
             header: enHeader,
             footer: enFooter,
+            home: enHome,
+            contact: enContact,
+            news: enNews,
+            reports: enReports,
         },
         ar: {
             // Home
@@ -47,6 +59,10 @@ i18n.use(initReactI18next).init({
             // Layout
             header: arHeader,
             footer: arFooter,
+            home: arHome,
+            contact: arContact,
+            news: arNews,
+            reports: arReports,
         }
     },
     lng: savedLanguage,

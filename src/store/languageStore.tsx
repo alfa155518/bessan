@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from 'zustand/middleware';
+import i18n from '../i18n';
 
 type Language = "en" | "ar";
 
@@ -14,17 +15,12 @@ export const useLanguageStore = create<LangState>()(
         (set, get) => ({
             lang: 'ar',
             setLang: (lang: Language) => {
-                import('../i18n').then(({ default: i18n }) => {
-                    i18n.changeLanguage(lang);
-                });
+                i18n.changeLanguage(lang);
                 set({ lang });
             },
             toggleLang: () => {
                 const newLang = get().lang === 'ar' ? 'en' : 'ar';
-                import('../i18n').then(({ default: i18n }) => {
-                    i18n.changeLanguage(newLang);
-                });
-                set({ lang: newLang });
+                get().setLang(newLang);
             },
         }),
         {

@@ -1,13 +1,17 @@
 {
-        "banner": {
-            "title": "Projects and Programs",
-            "description": "We work to empower communities through innovative and sustainable programs"
+    "banner": {
+        "title": "Projects and Programs",
+        "description": "We work to empower communities through innovative and sustainable programs"
+    },
+    "influence": {
+        "title": "Our Influence",
+        "activeProjects": "Active Projects",
+        "beneficiaries": "Beneficiaries",
+            "volunteers": "Volunteer",
+            "years": "Year"
         },
-        "influence": {
-            "title": "Our Influence",
-            "activeProjects": "Active Projects",
-            "beneficiaries": "Beneficiaries",
-            "volunteers": "Volunteers",
-            "years": "Years"
-        }
+    "media": {
+        "title": "Photos Documentary",
+        "description": "Visual documentation of the most important moments and activities in our various projects"
     }
+}

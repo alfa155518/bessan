@@ -43,10 +43,6 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ea580c;
+  background: #4caf50;
   border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #dc2626;
 }

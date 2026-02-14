@@ -1,0 +1,326 @@
+@use "@/sass/helpers/variables" as *;
+@use "@/sass/helpers/mixins" as *;
+
+.newsPage {
+    background: $bg-main;
+
+    .banner {
+        @include banner-section("@/assets/news/news-3.webp");
+    }
+
+    .mainContent {
+        padding: 80px 0;
+        background: $bg-section;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    // Featured Section
+    .featuredSection {
+        margin-bottom: 80px;
+
+        .featuredCard {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            background: $color-white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: $shadow-soft;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            @media (max-width: 992px) {
+                grid-template-columns: 1fr;
+            }
+
+            .imageWrapper {
+                position: relative;
+                height: 400px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s ease;
+                }
+
+                &:hover img {
+                    transform: scale(1.05);
+                }
+
+                .badge {
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    background: $color-primary;
+                    color: $color-white;
+                    padding: 6px 16px;
+                    border-radius: 30px;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    z-index: 2;
+
+                    [dir="rtl"] & {
+                        left: auto;
+                        right: 20px;
+                    }
+                }
+            }
+
+            .content {
+                padding: 40px;
+                @include flex(column, center, flex-start, 15px);
+
+                .date {
+                    color: $text-muted;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                }
+
+                h2 {
+                    font-size: 2.2rem;
+                    color: $text-primary;
+                    line-height: 1.25;
+                    margin: 0;
+                    font-weight: 800;
+                }
+
+                p {
+                    color: $text-secondary;
+                    line-height: 1.7;
+                    font-size: 1.3rem;
+                }
+
+                .readMoreBtn {
+                    margin-top: 10px;
+                    color: $color-primary;
+                    font-weight: 700;
+                    text-decoration: none;
+                    @include flex(row, flex-start, center, 8px);
+                    transition: color 0.3s ease;
+                    font-size: 1.1rem;
+
+                    &:hover {
+                        color: $color-primary-dark;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    // Main Grid Layout
+    .contentGrid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 50px;
+
+        @media (max-width: 992px) {
+            grid-template-columns: 1fr;
+            gap: 60px;
+        }
+    }
+
+    // Latest News Styles
+    .latestNews {
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+
+            @media (max-width: 600px) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .newsCard {
+            background: $color-white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: $shadow-soft;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+
+                .cardImage img {
+                    transform: scale(1.1);
+                }
+            }
+
+            .cardImage {
+                position: relative;
+                height: 220px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s ease;
+                }
+
+                .category {
+                    position: absolute;
+                    bottom: 15px;
+                    left: 15px;
+                    background: rgba($color-primary, 0.95);
+                    color: $color-white;
+                    padding: 6px 14px;
+                    border-radius: 6px;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    backdrop-filter: blur(4px);
+
+                    [dir="rtl"] & {
+                        left: auto;
+                        right: 15px;
+                    }
+                }
+            }
+
+            .cardContent {
+                padding: 25px;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+
+                .date {
+                    color: $text-muted;
+                    font-size: 1rem;
+                    margin-bottom: 12px;
+                    display: block;
+                }
+
+                h3 {
+                    font-size: 1.3rem;
+                    color: $text-primary;
+                    margin-bottom: 15px;
+                    line-height: 1.4;
+                    font-weight: 700;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+
+                p {
+                    color: $text-secondary;
+                    font-size: 1rem;
+                    line-height: 1.6;
+                    margin-bottom: 20px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    flex-grow: 1;
+                }
+
+                .link {
+                    color: $color-primary;
+                    font-weight: 700;
+                    text-decoration: none;
+                    font-size: 1.1rem;
+                    margin-top: auto;
+                    @include flex(row, flex-start, center, 5px);
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    // Announcements Side Styles
+    .announcementsSide {
+        .annList {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .annCard {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: $color-white;
+            padding: 18px;
+            border-radius: 12px;
+            border: 1px solid $border-color;
+            transition: all 0.3s ease;
+
+            &:hover {
+                border-color: $color-primary;
+                transform: translateX(5px);
+                box-shadow: $shadow-soft;
+
+                [dir="rtl"] & {
+                    transform: translateX(-5px);
+                }
+            }
+
+            .annDate {
+                background: $color-primary;
+                color: $color-white;
+                padding: 12px;
+                border-radius: 10px;
+                @include flex(column, center, center);
+                min-width: 65px;
+                height: 65px;
+
+                .day {
+                    font-size: 1.4rem;
+                    font-weight: 800;
+                    line-height: 1;
+                }
+
+                .month {
+                    font-size: 0.75rem;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+            }
+
+            .annInfo {
+                h4 {
+                    font-size: 1.05rem;
+                    color: $text-primary;
+                    margin-bottom: 8px;
+                    line-height: 1.35;
+                    font-weight: 600;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+
+                a {
+                    color: $color-primary;
+                    font-size: 0.9rem;
+                    font-weight: 700;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
