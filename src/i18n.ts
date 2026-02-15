@@ -24,6 +24,8 @@ import enNews from "./locales/en/news.json";
 import arNews from "./locales/ar/news.json";
 import enReports from "./locales/en/reports.json";
 import arReports from "./locales/ar/reports.json";
+import enServices from "./locales/en/services.json";
+import arServices from "./locales/ar/services.json";
 const savedLanguage = JSON.parse(localStorage.getItem('language-storage') || '{}')?.state?.lang || "ar";
 
 i18n.use(initReactI18next).init({
@@ -45,6 +47,7 @@ i18n.use(initReactI18next).init({
             contact: enContact,
             news: enNews,
             reports: enReports,
+            services: enServices,
         },
         ar: {
             // Home
@@ -63,6 +66,7 @@ i18n.use(initReactI18next).init({
             contact: arContact,
             news: arNews,
             reports: arReports,
+            services: arServices,
         }
     },
     lng: savedLanguage,

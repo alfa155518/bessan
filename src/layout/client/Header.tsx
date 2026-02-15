@@ -19,6 +19,7 @@ export default function Header() {
     { key: "nav.home", href: "/bessan" },
     { key: "nav.aboutUs", href: "/about" },
     { key: "nav.projectsPrograms", href: "/projects" },
+    { key: "nav.services", href: "/services" },
     { key: "nav.newsEvents", href: "/news" },
     { key: "nav.reportsTransparency", href: "/reports" },
     { key: "nav.contactUs", href: "/contact" },

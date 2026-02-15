@@ -1,0 +1,42 @@
+{
+    "banner": {
+        "title": "Our Services",
+        "description": "We offer a wide range of services and programs aimed at funding and developing the community and achieving sustainable development."
+    },
+    "section": {
+        "title": "What We Offer",
+        "description": "We are committed to providing outstanding services that meet the needs of beneficiaries and elevate the level of charitable work."
+    },
+    "list": [
+        {
+            "id": 1,
+            "title": "Productive Families Support",
+            "description": "Providing necessary support to families to develop their small projects and rely on themselves."
+        },
+        {
+            "id": 2,
+            "title": "Healthcare Services",
+            "description": "Providing medical services and therapeutic assistance to the groups most in need."
+        },
+        {
+            "id": 3,
+            "title": "Training and Rehabilitation",
+            "description": "Training programs aimed at developing youth skills and preparing them for the labor market."
+        },
+        {
+            "id": 4,
+            "title": "Orphan Sponsorship",
+            "description": "Securing the educational, living, and educational needs of orphans in a sustainable manner."
+        },
+        {
+            "id": 5,
+            "title": "Urgent Relief",
+            "description": "Rapid intervention in emergencies and providing in-kind and food assistance."
+        },
+        {
+            "id": 6,
+            "title": "Education Support",
+            "description": "Initiatives aimed at supporting struggling students and providing the necessary school tools."
+        }
+    ]
+}

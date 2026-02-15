@@ -3,12 +3,14 @@ import { useTranslation } from "react-i18next";
 import { useLanguageStore } from "@/store/languageStore";
 import Banner from "@/components/common/Banner";
 import SectionName from "@/components/common/SectionName";
-import { motion } from "framer-motion";
-import { FiFileText, FiDownload, FiBarChart2, FiDollarSign } from "react-icons/fi";
+import { motion, AnimatePresence } from "framer-motion";
+import { FiFileText, FiDownload, FiBarChart2, FiDollarSign, FiCalendar } from "react-icons/fi";
+import { useState } from "react";
 
 export default function ReportsAndTransparencyPage() {
     const { t } = useTranslation("reports");
     const { lang } = useLanguageStore();
+    const [activeFilter, setActiveFilter] = useState("all");
 
     const reportTypes = [
         { id: "annual", title: t("types.annual.title"), icon: <FiFileText />, desc: t("types.annual.desc") },
@@ -17,9 +19,23 @@ export default function ReportsAndTransparencyPage() {
     ];
 
     const reports = [
-        { id: 1, title: "التقرير السنوي 2023", year: "2023", size: "2.4 MB", type: "PDF" },
-        { id: 2, title: "التقرير المالي للربع الثالث 2023", year: "2023", size: "1.8 MB", type: "PDF" },
-        { id: 3, title: "تقرير إحصائيات الأداء النصف سنوي", year: "2023", size: "3.1 MB", type: "PDF" },
+        { id: 1, title: "التقرير السنوي 2023", date: "2023-12-31", period: "annual", size: "2.4 MB", type: "PDF" },
+        { id: 2, title: "التقرير المالي - ديسمبر", date: "2023-12-05", period: "monthly", size: "1.2 MB", type: "PDF" },
+        { id: 3, title: "تقرير إنجازات اليوم", date: "2024-02-15", period: "daily", size: "0.5 MB", type: "PDF" },
+        { id: 4, title: "التقرير المالي للربع الثالث 2023", date: "2023-09-30", period: "monthly", size: "1.8 MB", type: "PDF" },
+        { id: 5, title: "تقرير إحصائيات الأداء النصف سنوي", date: "2023-06-30", period: "monthly", size: "3.1 MB", type: "PDF" },
+        { id: 6, title: "التقرير السنوي 2022", date: "2022-12-31", period: "annual", size: "2.1 MB", type: "PDF" },
+    ];
+
+    const filteredReports = activeFilter === "all"
+        ? reports
+        : reports.filter(report => report.period === activeFilter);
+
+    const filters = [
+        { id: "all", label: t("download.filter.all") },
+        { id: "annual", label: t("download.filter.annual") },
+        { id: "monthly", label: t("download.filter.monthly") },
+        { id: "daily", label: t("download.filter.daily") },
     ];
 
     return (
@@ -52,22 +68,53 @@ export default function ReportsAndTransparencyPage() {
             <section className={styles.downloadList}>
                 <div className={styles.container}>
                     <SectionName title={t("download.title")} description={t("download.description")} />
-                    <div className={styles.table}>
-                        {reports.map((report) => (
-                            <div key={report.id} className={styles.reportRow}>
-                                <div className={styles.reportInfo}>
-                                    <FiFileText className={styles.fileIcon} />
-                                    <div>
-                                        <h4>{report.title}</h4>
-                                        <span>{report.type} • {report.size} • {report.year}</span>
-                                    </div>
-                                </div>
-                                <button className={styles.downloadBtn}>
-                                    <FiDownload /> {t("download.btn")}
-                                </button>
-                            </div>
+
+                    <div className={styles.filterTabs}>
+                        {filters.map((filter) => (
+                            <button
+                                key={filter.id}
+                                className={`${styles.filterBtn} ${activeFilter === filter.id ? styles.active : ""}`}
+                                onClick={() => setActiveFilter(filter.id)}
+                            >
+                                {filter.label}
+                            </button>
                         ))}
                     </div>
+
+                    <motion.div layout className={styles.reportGrid}>
+                        <AnimatePresence mode="popLayout">
+                            {filteredReports.map((report) => (
+                                <motion.div
+                                    key={report.id}
+                                    layout
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.9 }}
+                                    transition={{ duration: 0.3 }}
+                                    className={styles.reportCard}
+                                >
+                                    <div className={styles.cardHeader}>
+                                        <div className={styles.fileIcon}>
+                                            <FiFileText size={30} />
+                                        </div>
+                                        <span className={styles.fileType}>{report.type}</span>
+                                    </div>
+                                    <div className={styles.cardBody}>
+                                        <h4>{report.title}</h4>
+                                        <div className={styles.meta}>
+                                            <span>
+                                                <FiCalendar size={18} /> {report.date}
+                                            </span>
+                                            <span>{report.size}</span>
+                                        </div>
+                                    </div>
+                                    <button className={styles.downloadBtn}>
+                                        <FiDownload /> {t("download.btn")}
+                                    </button>
+                                </motion.div>
+                            ))}
+                        </AnimatePresence>
+                    </motion.div>
                 </div>
             </section>
         </div>

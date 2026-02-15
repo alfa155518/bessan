@@ -16,7 +16,13 @@
     "download": {
         "title": "Downloadable PDF Files",
         "description": "You can browse and download detailed reports available to the public to ensure maximum transparency",
-        "btn": "Download Report"
+        "btn": "Download Report",
+        "filter": {
+            "all": "All",
+            "annual": "Annual",
+            "monthly": "Monthly",
+            "daily": "Daily"
+        }
     },
     "banner": {
         "title": "Transparency & Reports",

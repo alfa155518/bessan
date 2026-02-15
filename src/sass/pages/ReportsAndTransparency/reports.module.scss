@@ -4,6 +4,10 @@
 .reportsPage {
     background: $color-white;
 
+    .banner {
+        @include banner-section("@/assets/reports/reports-banner.png");
+    }
+
     .container {
         max-width: 1200px;
         margin: 0 auto;
@@ -62,70 +66,122 @@
     .downloadList {
         padding: 100px 0;
 
-        .table {
-            margin-top: 50px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+        .filterTabs {
+            @include flex(row, center, center, 15px);
+            margin-bottom: 40px;
+            flex-wrap: wrap;
 
-        .reportRow {
-            @include flex(row, space-between, center);
-            background: $color-off-white;
-            padding: 20px 30px;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-
-            @media (max-width: 576px) {
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
-            }
-
-            .reportInfo {
-                @include flex(row, flex-start, center, 20px);
-
-                @media (max-width: 576px) {
-                    flex-direction: column;
-                }
-
-                .fileIcon {
-                    font-size: 2rem;
-                    color: $color-primary;
-                }
-
-                h4 {
-                    font-size: 1.1rem;
-                    margin-bottom: 5px;
-                }
-
-                span {
-                    font-size: 0.85rem;
-                    color: $text-muted;
-                }
-            }
-
-            .downloadBtn {
-                @include flex(row, center, center, 10px);
+            .filterBtn {
+                padding: 10px 25px;
+                border-radius: 30px;
+                border: 1px solid $border-color;
                 background: $color-white;
-                color: $color-primary;
-                border: 1px solid $color-primary;
-                padding: 10px 20px;
-                border-radius: 8px;
+                color: $text-secondary;
                 font-weight: 600;
                 cursor: pointer;
                 transition: all 0.3s ease;
 
                 &:hover {
+                    border-color: $color-primary;
+                    color: $color-primary;
+                }
+
+                &.active {
+                    background: $color-primary;
+                    color: $color-white;
+                    border-color: $color-primary;
+                    box-shadow: $shadow-soft;
+                }
+            }
+        }
+
+        .reportGrid {
+            @include grid(300px, 3rem);
+            margin-top: 30px;
+        }
+
+        .reportCard {
+            background: $color-white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: $shadow-soft;
+            border: 1px solid $border-color;
+            transition: all 0.3s ease;
+            @include flex(column, space-between, stretch, 20px);
+
+            &:hover {
+                transform: translateY(-10px);
+                border-color: $color-primary;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+
+                .fileIcon {
                     background: $color-primary;
                     color: $color-white;
                 }
             }
 
-            &:hover {
-                background: $color-white;
-                box-shadow: $shadow-soft;
-                transform: scale(1.01);
+            .cardHeader {
+                @include flex(row, space-between, center);
+
+                .fileIcon {
+                    width: 50px;
+                    height: 50px;
+                    background: $bg-section;
+                    color: $color-primary;
+                    border-radius: 12px;
+                    @include flex;
+                    font-size: 1.5rem;
+                    transition: all 0.3s ease;
+                }
+
+                .fileType {
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: $color-white;
+                    text-transform: uppercase;
+                    background: $color-secondary-dark;
+                    padding: 4px 10px;
+                    border-radius: 6px;
+                }
+            }
+
+            .cardBody {
+                h4 {
+                    font-size: 1.25rem;
+                    color: $text-primary;
+                    margin-bottom: 12px;
+                    line-height: 1.4;
+                }
+
+                .meta {
+                    @include flex(row, flex-start, center, 15px);
+                    color: $text-muted;
+                    font-size: 1rem;
+
+                    span {
+                        @include flex(row, flex-start, center, 6px);
+                    }
+                }
+            }
+
+            .downloadBtn {
+                @include flex(row, center, center, 10px);
+                border: 1px solid $color-primary;
+                // background: $bg-section;
+                // color: $color-primary;
+                // border: none;
+                // padding: 12px;
+                // border-radius: 12px;
+                // font-weight: 600;
+                // cursor: pointer;
+                // transition: all 0.3s ease;
+
+                // &:hover {
+                //     background: $color-primary;
+                //     color: $color-white;
+                // }
+
+                @include primary-link;
             }
         }
     }

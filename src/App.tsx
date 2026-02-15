@@ -8,6 +8,7 @@ import Contact from "./pages/Contact/page"
 import NewsAndEvents from "./pages/NewsAndEvents/page"
 import ProjectAndPrograms from "./pages/ProjectAndPrograms/page"
 import ReportsAndTransparency from "./pages/ReportsAndTransparency/page"
+import Services from "./pages/Services/page"
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/news" element={<NewsAndEvents />} />
         <Route path="/projects" element={<ProjectAndPrograms />} />
         <Route path="/reports" element={<ReportsAndTransparency />} />
+        <Route path="/services" element={<Services />} />
 
       </Routes>
       <Footer />
