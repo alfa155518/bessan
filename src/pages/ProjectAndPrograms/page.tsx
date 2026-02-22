@@ -7,24 +7,33 @@ import SectionName from "@/components/common/SectionName";
 import { useTranslation } from "react-i18next";
 import Counter from "@/components/common/Counter";
 import Projects from "@/components/common/Projects";
-import { FaPeopleCarryBox } from "react-icons/fa6";
-import { FiHeart } from "react-icons/fi";
-import { GrEmptyCircle } from "react-icons/gr";
-import { GiThreeLeaves } from "react-icons/gi";
+import { FaBuilding } from "react-icons/fa6";
+import { FiHeart, FiShield, FiActivity, FiSmile } from "react-icons/fi";
 
 import ProjectMedia from "./ProjectMedia";
+
+interface ProgramItem {
+    id: number;
+    title: string;
+    description: string;
+}
+
+const iconMap: { [key: number]: React.ReactNode } = {
+    1: <FaBuilding />,
+    2: <FiSmile />,
+    3: <FiShield />,
+    4: <FiActivity />,
+    5: <FiHeart />,
+};
 
 export default function ProjectAndPrograms() {
     const { lang } = useLanguageStore();
     const { t: tProjects } = useTranslation("projects");
     const { t: tSection } = useTranslation("projectsAndProgramsSection");
 
-    const cards = [
-        { icon: <FaPeopleCarryBox />, title: tSection("card1.title"), desc: tSection("card1.description") },
-        { icon: <FiHeart />, title: tSection("card2.title"), desc: tSection("card2.description") },
-        { icon: <GrEmptyCircle />, title: tSection("card3.title"), desc: tSection("card3.description") },
-        { icon: <GiThreeLeaves />, title: tSection("card4.title"), desc: tSection("card4.description") },
-    ];
+    // Get list of programs from translations
+    const programsList = tSection("list", { returnObjects: true });
+    const programs = Array.isArray(programsList) ? (programsList as ProgramItem[]) : [];
 
     return (
         <div className={styles.project_and_programs} dir={lang === "ar" ? "rtl" : "ltr"}>
@@ -45,14 +54,14 @@ export default function ProjectAndPrograms() {
             <Projects dir={lang === "ar" ? "rtl" : "ltr"}>
                 <Projects.Header title={tSection("title")} description={tSection("description")} />
                 <Projects.List>
-                    {cards.map((card, index) => (
-                        <Projects.Card key={index}>
-                            <Projects.Icon>{card.icon}</Projects.Icon>
-                            <Projects.Title>{card.title}</Projects.Title>
-                            <Projects.Description>{card.desc}</Projects.Description>
+                    {programs.map((program) => (
+                        <Projects.Card key={program.id}>
+                            <Projects.Icon>{iconMap[program.id] || <FiActivity />}</Projects.Icon>
+                            <Projects.Title>{program.title}</Projects.Title>
+                            <Projects.Description>{program.description}</Projects.Description>
                             <Projects.Details
                                 label={tSection("details")}
-                                onClick={() => console.log(`Details for ${card.title}`)}
+                                onClick={() => console.log(`Details for ${program.title}`)}
                             />
                         </Projects.Card>
                     ))}
@@ -85,3 +94,4 @@ export default function ProjectAndPrograms() {
         </div>
     )
 }
+

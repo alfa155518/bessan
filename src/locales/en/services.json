@@ -1,42 +1,94 @@
 {
     "banner": {
         "title": "Our Services",
-        "description": "We offer a wide range of services and programs aimed at funding and developing the community and achieving sustainable development."
+        "description": "We offer a wide range of services and programs aimed at empowering and developing the community and achieving sustainable development."
     },
     "section": {
         "title": "What We Offer",
-        "description": "We are committed to providing outstanding services that meet the needs of beneficiaries and elevate the level of charitable work."
+        "description": "We are committed to providing outstanding services that meet the needs of beneficiaries and elevate the level of developmental and humanitarian work."
     },
     "list": [
         {
             "id": 1,
-            "title": "Productive Families Support",
-            "description": "Providing necessary support to families to develop their small projects and rely on themselves."
+            "title": "Women's Services",
+            "features": [
+                "Vocational courses (sewing, embroidery, home cooking, hairdressing, soap and natural products).",
+                "Psychosocial support for women affected by war or violence.",
+                "Health awareness (reproductive health, nutrition, prenatal care).",
+                "Economic empowerment sessions (small project management, home marketing).",
+                "In-kind assistance for widows, divorcees, and female breadwinners (occasionally)."
+            ]
         },
         {
             "id": 2,
-            "title": "Healthcare Services",
-            "description": "Providing medical services and therapeutic assistance to the groups most in need."
+            "title": "Child Services",
+            "features": [
+                "Psychological support for trauma-affected children.",
+                "Psychological discharge activities (drawing, theater, play, music).",
+                "Tutoring and remedial education.",
+                "Community nursery or kindergarten.",
+                "Child protection programs and awareness of rights.",
+                "Care for children with mild disabilities or learning difficulties."
+            ]
         },
         {
             "id": 3,
-            "title": "Training and Rehabilitation",
-            "description": "Training programs aimed at developing youth skills and preparing them for the labor market."
+            "title": "Youth Empowerment",
+            "features": [
+                "Life skills courses (leadership, communication, teamwork).",
+                "Vocational training (carpentry, electricity, mobile phones, computers).",
+                "Technical courses (graphic design, programming, digital marketing).",
+                "Support for community youth initiatives.",
+                "Entrepreneurship and small project management for youth."
+            ]
         },
         {
             "id": 4,
-            "title": "Orphan Sponsorship",
-            "description": "Securing the educational, living, and educational needs of orphans in a sustainable manner."
+            "title": "Social and Humanitarian Services",
+            "features": [
+                "Distribution of food parcels and relief aid (occasionally through partners).",
+                "Winter and summer aid - blankets and clothes (occasionally through partners).",
+                "Medical assistance (medical days and health awareness).",
+                "Community awareness sessions (domestic violence, early marriage, school dropout)."
+            ]
         },
         {
             "id": 5,
-            "title": "Urgent Relief",
-            "description": "Rapid intervention in emergencies and providing in-kind and food assistance."
-        },
-        {
-            "id": 6,
-            "title": "Education Support",
-            "description": "Initiatives aimed at supporting struggling students and providing the necessary school tools."
+            "title": "Organizational and Developmental Services",
+            "features": [
+                "Case Management for the most vulnerable families.",
+                "Program monitoring and evaluation.",
+                "Beneficiary data collection.",
+                "Reporting for donors.",
+                "Implementing locally or internationally funded projects."
+            ]
         }
-    ]
+    ],
+    "caseManagement": {
+        "title": "What is Case Management?",
+        "description": "It is a system for following up on beneficiaries (women, children, families, youth) from the moment of registration until their situation improves, through:",
+        "steps": [
+            {
+                "id": 1,
+                "title": "Assessment"
+            },
+            {
+                "id": 2,
+                "title": "Planning"
+            },
+            {
+                "id": 3,
+                "title": "Referral"
+            },
+            {
+                "id": 4,
+                "title": "Follow-up"
+            },
+            {
+                "id": 5,
+                "title": "Closure"
+            }
+        ]
+    }
 }
+

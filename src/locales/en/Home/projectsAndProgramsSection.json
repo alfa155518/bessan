@@ -1,22 +1,33 @@
 {
     "title": "Projects and Programs",
-    "description": "We offer a diverse range of growth-oriented programs and projects",
-    "card1": {
-        "title": "Education Program",
-        "description": "Providing equal educational opportunities to disadvantaged children"
-    },
-    "card2": {
-        "title": "Health Program",
-        "description": "Providing comprehensive health services to marginalized communities"
-    },
-    "card3": {
-        "title": "Social Support Program",
-        "description": "Providing financial and emotional support to poor families"
-    },
-    "card4": {
-        "title": "Sustainable Environment",
-        "description": "Protecting the environment and promoting sustainable practices"
-    },
+    "description": "We offer a diverse range of developmental programs and projects aimed at building a resilient and empowered community",
+    "list": [
+        {
+            "id": 1,
+            "title": "Beesan Association and Partner Institutions Capacity Building Program",
+            "description": "Strengthening local institutions and developing their administrative and technical capabilities to provide better services to the community."
+        },
+        {
+            "id": 2,
+            "title": "Women, Children, and Youth Capacity and Skills Development Program",
+            "description": "Empowering marginalized groups through educational and skill-building courses that help them build a better future."
+        },
+        {
+            "id": 3,
+            "title": "Community Protection Program in Emergencies, Crises, and Wars",
+            "description": "Providing a safe environment and psychological and social support for those affected by conflicts."
+        },
+        {
+            "id": 4,
+            "title": "Integrated Sectoral Care Program (Health, Education, and Culture)",
+            "description": "A comprehensive approach that combines essential services to ensure community well-being and balanced development."
+        },
+        {
+            "id": 5,
+            "title": "Vulnerable Families Empowerment Program",
+            "description": "Supporting the most families in need through developmental projects that enable them to achieve self-reliance."
+        }
+    ],
     "btn": "Learn More",
     "details": "Show Details"
 }
